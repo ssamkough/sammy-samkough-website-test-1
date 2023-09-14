@@ -1,5 +1,5 @@
-import { Application, Router } from "https://deno.land/x/oak@v11.1.0/mod.ts";
 import type { Context } from "https://deno.land/x/oak@v11.1.0/mod.ts";
+import { Application, Router } from "https://deno.land/x/oak@v11.1.0/mod.ts";
 
 const router = new Router();
 router
@@ -34,4 +34,5 @@ app.use(async (context) => {
   });
 });
 
+console.log("should be running on http://localhost:8000")
 await app.listen({ port: 8000 });
